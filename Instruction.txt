@@ -1,0 +1,59 @@
+Hi all, 
+
+I made adaptor cable to convert Megadrive/Genesis pad to PC Engine/TurboGrafx. As you can see in the photo, itÅfs very small. I just need nice little case to make it look better.
+
+The pad IÅfm using is 8bitdo M30 Megadrive pad and converted it as 6 button Avenue pad. It can be switched to 3 button pad too.
+
+Cost of making this converter is like $10 because I used cheap pro micro 16MHz board and cheap sockets/cables bought them from AliExpress. Require very easy soldering.
+
+You need to buy:
+1. Arduino Pro Micro. Make sure to buy one with MICROUSB socket, 5V and 16MHz crystal.
+2. Megadrive/Genesis controller extension cable.
+3. Mini DIN 8 pin male socket(I didnÅft buy one and I used other cable for mine but this one should work)
+4. 8bitdo M30 gamepad for Megadrive/Genesis
+
+For instruction to build adaptor, please see 4 images to find which pins of sockets you need to connect to the pro micro board.
+What you got to do is cut Megadrive pad extension cable, solder two cables to pro micro, solder Mini DIN8 socket on other end of cable. Total of 25 wires to solder. ThatÅfs all for hardware. Download Arduino IDE, open my code using IDE, upload code to Pro micro board through USB micro cable. Ta-da.
+
+Arduino IDE:
+https://www.arduino.cc/en/Main/Software
+
+See below for controller mapping of M30 and PCEngine pad:
+
+3 button mode(Default):
+Up-Up
+Down-Down
+Left-Left
+Right-Right
+Start-RUN
+Star-None(Used for rapid fire toggle)
+Bar(Mode)-Select
+Flag-Press to toggle buttonA and buttonX function. Hold this button 3 seconds to change mode to 6 button mode
+A-RUN or Select
+B-II
+C/L-I
+X-Auto rapid RUN or auto rapid Select
+Y-II rapid
+Z/R-I rapid
+
+
+6 button mode:
+Up-Up
+Down-Down
+Left-Left
+Right-Right
+Start-RUN
+Star-None(Used for rapid fire toggle)
+Bar(Mode)-Select
+Flag-Hold this button 3 seconds to change mode to 3 button mode
+A-III
+B-II
+C-I
+X/L-IV
+Y-V
+Z/R-VI
+
+Have fun!
+
+Thanks,
+tamanegi_taro
